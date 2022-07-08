@@ -1,0 +1,21 @@
+.categories {
+    margin: 0px 0;
+}
+
+.categories button {
+    padding: 10px 30px;
+    border-radius: 0px;
+    transition: .1s ease;
+}
+
+
+
+
+
+.categories .first {
+    border-radius: 13px 0px 0px 13px;
+}
+
+.categories .last {
+    border-radius: 0px 13px 13px 0px;
+}

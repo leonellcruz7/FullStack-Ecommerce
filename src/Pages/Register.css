@@ -1,0 +1,71 @@
+.register {
+    height: 100vh;
+    background-color: rgb(188, 218, 228);
+    padding-top: 120px;
+}
+
+.register .row {
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.register .idIcon {
+    margin: 0 10px;
+}
+
+.register .title {
+    background-color: rgb(44, 123, 189);
+    padding-left: 15px;
+    padding-bottom: 12px;
+    transform: translateY(10%);
+    border-radius: 10px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+
+}
+
+.register .name,
+.address,
+.contact,
+.password {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.register .card {
+    transform: translateZ(0);
+    box-shadow: 0px 0px 22px 8px rgba(0, 0, 0, 0.26);
+    transition: .2s ease;
+}
+
+.register .card:focus-within {
+    transform: scale(1.02);
+}
+
+.register .nameTxt {
+    flex-basis: 49%;
+}
+
+.register .email {
+    flex-basis: 60%;
+}
+
+.register .mobile {
+    flex-basis: 38%;
+}
+
+.register input {
+    margin: 12px 0;
+}
+
+.register .footer {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register .divider {
+    width: 90%;
+}

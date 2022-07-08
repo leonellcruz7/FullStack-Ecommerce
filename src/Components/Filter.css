@@ -1,0 +1,16 @@
+.filter {
+    flex-basis: 20%;
+}
+
+.filter li {
+    display: flex;
+    margin: 10px 0;
+}
+
+.filter li input {
+    margin: 0 10px;
+}
+
+.filter li label {
+    margin: 0 10px;
+}

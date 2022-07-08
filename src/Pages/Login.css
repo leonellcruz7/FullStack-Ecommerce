@@ -1,0 +1,85 @@
+.login {
+    height: 100vh;
+    background-color: rgb(188, 218, 228);
+    padding-top: 120px;
+}
+
+.login .row {
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.login .idIcon {
+    margin: 0 10px;
+}
+
+.login .title {
+    background-color: rgb(44, 123, 189);
+    padding-left: 15px;
+    padding-bottom: 12px;
+    transform: translateY(10%);
+    border-radius: 10px 10px 0px 0px;
+    color: rgb(255, 255, 255);
+
+}
+
+.login .name,
+.address,
+.contact,
+.password {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.login .content {
+    padding: 0 120px;
+}
+
+.login .slog {
+    padding: 0 60px;
+}
+
+.login .slog h1 {
+    letter-spacing: -2px;
+    line-height: 70px;
+    font-size: 60px;
+    margin: 30px 0;
+
+}
+
+.login .card {
+    transform: translateZ(0);
+    box-shadow: 0px 0px 22px 8px rgba(0, 0, 0, 0.26);
+    transition: .2s ease;
+}
+
+.login .card:focus-within {
+    transform: scale(1.02);
+}
+
+.login .email {
+    flex-basis: 100%;
+}
+
+
+.login input {
+    margin: 12px 0;
+}
+
+.login .footer {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login .divider {
+    width: 90%;
+}
+
+.login .create button {
+    padding: 10px 30px;
+}

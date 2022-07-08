@@ -1,0 +1,52 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .link {
+    margin: 0 10px;
+    color: #555;
+
+}
+
+.navbar input {
+    padding: 5px 10px;
+    border-radius: 12px 0px 0px 12px;
+    border: none;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.39);
+}
+
+.navbar li button {
+    border-radius: 0px 12px 12px 0px;
+    padding: 8px 6px;
+    font-size: 12px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.39);
+}
+
+.navbar .row {
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar .regBtn {
+    padding: 7px 6px;
+    margin: 0 5px;
+}
+
+.navbar .fontIcons {
+    font-size: 20px;
+    color: rgb(202, 81, 33);
+}

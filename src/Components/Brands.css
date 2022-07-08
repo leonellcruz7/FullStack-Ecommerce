@@ -1,0 +1,20 @@
+.brands {
+    padding: 30px 0;
+}
+
+.brands img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: .2s ease;
+}
+
+.brands img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.brands .content {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}

@@ -1,0 +1,11 @@
+.prodsec {
+    flex-basis: 80%;
+}
+
+.prodsec .content {
+    padding: 10px;
+}
+
+.prodsec .content img {
+    width: 100%;
+}
