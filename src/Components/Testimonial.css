@@ -3,6 +3,10 @@
     background-color: rgb(231, 243, 247);
 }
 
+.testimonial h1 {
+    line-height: 60px;
+}
+
 .testimonial .title {
     margin-bottom: 30px;
 }
@@ -28,7 +32,7 @@
 .testimonial .quote {
     font-size: 40px;
     color: rgb(212, 210, 88);
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .testimonial .stars {
@@ -39,4 +43,45 @@
     width: 50%;
     border-radius: 50%;
     margin: 20px 0;
+}
+
+@media only screen and (max-width:1400px) {
+    .testimonial .col4 {
+        flex-basis: 50%;
+        margin: 10px 0;
+    }
+
+    .testimonial .card {
+        border-radius: 8px;
+        text-align: center;
+        padding: 20px 40px;
+        margin: 0 10px;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media only screen and (max-width:930px) {
+    .testimonial .card {
+        border-radius: 8px;
+        text-align: center;
+        padding: 10px 10px;
+        margin: 0 10px;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@media only screen and (max-width:830px) {
+    .testimonial .smCon {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:530px) {
+    .testimonial .col4 {
+        flex-basis: 90%;
+    }
 }

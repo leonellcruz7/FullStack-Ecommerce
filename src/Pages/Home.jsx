@@ -6,7 +6,6 @@ import Filter from '../Components/Filter'
 import ProductSection from '../Components/ProductSection'
 import Testimonial from '../Components/Testimonial'
 import Brands from '../Components/Brands'
-import Footer from '../Components/Footer'
 
 
 export default function Home() {
@@ -24,7 +23,6 @@ export default function Home() {
             </div>
             <Testimonial />
             <Brands />
-            <Footer />
 
 
 

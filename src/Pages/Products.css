@@ -1,0 +1,44 @@
+.products {
+    background-color: rgb(188, 218, 228);
+    padding-top: 170px;
+    padding-bottom: 110px;
+}
+
+.products .row {
+    justify-content: center;
+}
+
+.products .col6 {
+    flex-basis: 20%;
+
+}
+
+.products .col2 {
+    flex-basis: 80%;
+    justify-content: center;
+
+}
+
+@media only screen and (max-width:1600px) {
+    .products .smCon {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    .products .smCon {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .products .col6 {
+        display: none;
+    }
+
+    .products .col2 {
+        flex-basis: 90%;
+        justify-content: center;
+
+    }
+}

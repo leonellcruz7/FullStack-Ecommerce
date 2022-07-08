@@ -7,6 +7,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+img {
+
+  width: 100%;
+}
+
 h1 {
   font-size: 60px;
 }
@@ -125,6 +130,13 @@ button:active {
   background-color: rgb(180, 189, 197);
   width: 100%;
   margin: 20px 0;
+}
+
+.h-divider {
+  width: 1px;
+  height: 100%;
+  margin: 0 40px;
+  background-color: rgb(121, 132, 143);
 }
 
 input {

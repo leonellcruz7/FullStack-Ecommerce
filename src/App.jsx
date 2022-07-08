@@ -7,8 +7,9 @@ import Login from './Pages/Login';
 import Logout from './Pages/Logout';
 import Register from './Pages/Register';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faShoppingCart, faIdCard, faStar, faQuoteRight } from '@fortawesome/free-solid-svg-icons'
-library.add(faShoppingCart, faIdCard, faStar, faQuoteRight)
+import { faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons'
+import Products from './Pages/Products';
+library.add(faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown)
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/products' element={<Products />} />
         <Route path='/register' element={<Register />} />
         <Route path='/logout' element={<Logout />} />
 

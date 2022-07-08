@@ -7,7 +7,7 @@ export default function Categories() {
         <div className="categories">
             <div className="smCon">
                 <div className="row">
-                    <div className="col2">
+                    <div className="col1">
                         <div className="content">
                             <button className='first'>Men</button>
                             <button>Women</button>

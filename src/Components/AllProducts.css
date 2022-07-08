@@ -1,0 +1,37 @@
+.all {
+
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.all .content {
+    margin: 12px;
+}
+
+@media only screen and (max-width:1350px) {
+    .all .col5 {
+        flex-basis: 25%;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .all .col5 {
+        flex-basis: 33%;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    .all .col5 {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width:370px) {
+
+    h4,
+    p,
+    .star {
+        font-size: 13px;
+    }
+}

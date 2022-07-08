@@ -8,14 +8,14 @@ export default function Login() {
         <div className="login">
             <div className="mdCon">
                 <div className="row">
-                    <div className="col2">
+                    <div className="col2 slogan">
                         <div className="content slog">
                             <h1>Shop at the comfort <br /> of your Home</h1>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi dignissimos sapiente nemo quaerat </p>
                         </div>
                     </div>
-                    <div className="col2">
-                        <div className="content content">
+                    <div className="col2 loginform">
+                        <div className="content">
                             <div className="title"><h2>Login     <FontAwesomeIcon className='idIcon' icon="fa-solid fa-id-card" /></h2></div>
                             <div className="card">
                                 <div className="email"><input type="text" placeholder='Email' /></div>
@@ -35,6 +35,7 @@ export default function Login() {
 
                 </div>
             </div>
+
         </div>
     )
 }

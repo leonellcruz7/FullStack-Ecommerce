@@ -18,3 +18,40 @@
     align-items: center;
     padding: 50px;
 }
+
+@media only screen and (max-width:900px) {
+    .brands .smCon {
+        width: 90%;
+
+    }
+
+    .brands .col5 {
+        flex-basis: 33%;
+    }
+
+    .brands .row {
+        justify-content: center;
+    }
+
+    .brands .content {
+        padding: 35px;
+    }
+}
+
+@media only screen and (max-width:1400px) {
+    .brands .col5 {
+        flex-basis: 33%;
+    }
+}
+
+@media only screen and (max-width:960px) {
+    .brands .col5 {
+        flex-basis: 50%;
+    }
+}
+
+@media only screen and (max-width:460px) {
+    .brands .col5 {
+        flex-basis: 70%;
+    }
+}
