@@ -12,7 +12,7 @@ export default function Filter() {
                             <input type="radio" name='options' id='Top' />
                         </div>
                         <div className="div">
-                            <label for='Top'>Top</label>
+                            <label htmlFor='Top'>Top</label>
                         </div>
                     </li>
                     <li>
@@ -20,7 +20,7 @@ export default function Filter() {
                             <input type="radio" name='options' id='Shorts' />
                         </div>
                         <div className="div">
-                            <label for='Shorts'>Shorts</label>
+                            <label htmlFor='Top'>Shorts</label>
                         </div>
                     </li>
                     <li>
@@ -28,7 +28,7 @@ export default function Filter() {
                             <input type="radio" name='options' id='Pants' />
                         </div>
                         <div className="div">
-                            <label for='Pants'>Pants</label>
+                            <label htmlFor='Top'>Pants</label>
                         </div>
                     </li>
                     <li>
@@ -36,7 +36,7 @@ export default function Filter() {
                             <input type="radio" name='options' id='Jeans' />
                         </div>
                         <div className="div">
-                            <label for='Jeans'>Jeans</label>
+                            <label htmlFor='Top'>Jeans</label>
                         </div>
                     </li>
                     <li>
@@ -44,7 +44,7 @@ export default function Filter() {
                             <input type="radio" name='options' id='Underwear' />
                         </div>
                         <div className="div">
-                            <label for='Underwear'>Underwear</label>
+                            <label htmlFor='Top'>Underwear</label>
                         </div>
                     </li>
 

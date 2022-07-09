@@ -7,25 +7,37 @@ import Login from './Pages/Login';
 import Logout from './Pages/Logout';
 import Register from './Pages/Register';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 import Products from './Pages/Products';
-library.add(faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown)
+import UserContext from './Components/UserContext';
+import { useContext } from 'react';
+import { useState } from 'react';
+import ProductView from './Components/ProductView';
+import Cart from './Pages/Cart';
+library.add(faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown, faMinus, faPlus)
 
 
 
 function App() {
+  const [user, setUser] = useState({
+    name: localStorage.getItem('name')
+  })
   return (
 
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/products' element={<Products />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/logout' element={<Logout />} />
+      <UserContext.Provider value={{ user, setUser }}>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/logout' element={<Logout />} />
+          <Route path='/product/:productId' element={<ProductView />} />
+          <Route path='/cart' element={<Cart />} />
 
-      </Routes>
+        </Routes>
+      </UserContext.Provider>
     </BrowserRouter>
   );
 }

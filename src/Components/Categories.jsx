@@ -12,9 +12,7 @@ export default function Categories() {
                             <button className='first'>Men</button>
                             <button>Women</button>
                             <button>Kids</button>
-                            <button>Sports</button>
-                            <button>Lifestyle</button>
-                            <button className='last'>Home</button>
+                            <button className='last'>Sports</button>
                         </div>
                     </div>
                 </div>

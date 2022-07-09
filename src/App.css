@@ -116,6 +116,23 @@ button {
   transition: .1s ease;
 }
 
+.inactive {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 10px;
+  color: #fff;
+  background-color: rgb(54, 54, 54);
+  cursor: pointer;
+  transition: .1s ease;
+  cursor: default;
+}
+
+.inactive:hover {
+  transform: scale(1);
+  background-color: rgb(54, 54, 54);
+
+}
+
 button:hover {
   transform: scale(1.05);
   background-color: rgb(127, 155, 151);

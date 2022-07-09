@@ -1,5 +1,4 @@
 import React from 'react'
-import vr from '../img/vr.png'
 import './Featured.css'
 
 export default function Featured() {
@@ -9,7 +8,7 @@ export default function Featured() {
                 <div className="row">
                     <div className="col2">
                         <div className="content">
-                            <img src={vr} alt="" />
+                            <img src={require(`../img/vr.png`)} alt="" />
                         </div>
                     </div>
                     <div className="col2">

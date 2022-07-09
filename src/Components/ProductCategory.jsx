@@ -5,10 +5,9 @@ export default function ProductCategory() {
     return (
         <div className="prodcat">
             <button className='first'>Men</button>
-            <button>Men</button>
-            <button>Men</button>
-            <button>Men</button>
-            <button className='last'>Men</button>
+            <button>Women</button>
+            <button>Kids</button>
+            <button className='last'>Sports</button>
         </div>
     )
 }

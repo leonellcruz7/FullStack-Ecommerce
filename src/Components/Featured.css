@@ -16,6 +16,7 @@
 
 .featured .content h1 {
     margin: 12px 0;
+    line-height: 60px;
 }
 
 .featured button {

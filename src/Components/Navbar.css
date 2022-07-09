@@ -56,8 +56,14 @@
 }
 
 .navbar .fontIcons {
-    font-size: 20px;
+    font-size: 30px;
     color: rgb(202, 81, 33);
+    margin: 0 12px;
+    transition: .1s ease;
+}
+
+.navbar .fontIcons:hover {
+    transform: scale(1.2);
 }
 
 .navbar .mobileNav {
@@ -66,6 +72,11 @@
 
 .navbar .toggler {
     display: none;
+}
+
+.navbar .cart {
+    display: flex;
+    align-items: center;
 }
 
 
