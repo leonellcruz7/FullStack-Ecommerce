@@ -12,7 +12,7 @@ export default function AllProducts({ productProp }) {
     function view(e) {
         e.preventDefault()
 
-        fetch('http://localhost:4000/products/getbyid', {
+        fetch('https://ecommerce-leonell.herokuapp.com/products/getbyid', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

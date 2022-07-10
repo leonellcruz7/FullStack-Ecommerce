@@ -42,7 +42,10 @@ export default function NavBar() {
                         <li><Link className='link' to='/products'>products</Link></li>
 
                         {isOnline ?
-                            <li><Link className='link' to='/logout'>logout</Link></li>
+                            <Fragment>
+                                <li><Link className='link' to='/logout'>logout</Link></li>
+                                <li><Link className='link' to='/cart'>cart</Link></li>
+                            </Fragment>
                             :
                             <Fragment>
                                 <li><Link className='link' to='/login'>login</Link></li>

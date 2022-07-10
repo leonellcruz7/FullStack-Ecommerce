@@ -13,7 +13,9 @@ export default function ProductView() {
     const [active, setActive] = useState(false)
 
     function inc(e) {
-        setAmount(amount + 1)
+        if (amount < product.availableStock) {
+            setAmount(amount + 1)
+        }
     }
 
     function dec(e) {
@@ -24,20 +26,16 @@ export default function ProductView() {
     }
 
     useEffect(() => {
-        if (amount == 0) {
+        if (amount == 0 || product.availableStock < amount) {
             setActive(false)
         }
         else {
             setActive(true)
         }
-    })
+    }, [amount])
 
     useEffect(() => {
-        console.log(user)
-    })
-
-    useEffect(() => {
-        fetch('http://localhost:4000/products/getbyid', {
+        fetch('https://ecommerce-leonell.herokuapp.com/products/getbyid', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,14 +44,13 @@ export default function ProductView() {
                 id: localStorage.getItem('productId')
             })
         }).then(res => res.json()).then(data => {
-            console.log(data)
             setProduct(data)
         })
-    }, [])
+    }, [product])
 
     function buy(e) {
         e.preventDefault()
-        fetch('http://localhost:4000/orders/addtocart', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/addtocart', {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -64,10 +61,12 @@ export default function ProductView() {
                 amount: amount
             })
         }).then(res => res.json()).then(data => {
-            console.log(data)
+
             setProduct({
                 availableStock: product.availableStock - amount
             })
+
+
         })
     }
 

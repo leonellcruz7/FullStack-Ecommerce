@@ -19,7 +19,7 @@ export default function Register() {
     function register(e) {
         e.preventDefault()
 
-        fetch('http://localhost:4000/users/register', {
+        fetch('https://ecommerce-leonell.herokuapp.com/users/register', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

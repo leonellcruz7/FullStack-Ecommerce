@@ -6,22 +6,32 @@ import './Cart.css'
 export default function Cart() {
 
     const [orders, setOrders] = useState([])
+    const [prices, setPrices] = useState([])
+    const [total, setTotal] = useState(0)
 
     useEffect(() => {
-        fetch('http://localhost:4000/orders/getmyorder', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/getmyorder', {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         }).then(res => res.json()).then(data => {
             console.log(data)
+            setPrices(data.map(result => {
+                return (
+                    result.totalBalance
+                )
+            }))
+            setTotal(prices.reduce((a, b) => a + b, 0))
             setOrders(data.map(order => {
                 return (
                     <OrderView key={order._id} orderProp={order} />
                 )
             }))
         })
-    }, [])
+    }, [total, prices])
+
+
     return (
         <div className="Cart">
             <div className="smCon">
@@ -38,7 +48,7 @@ export default function Cart() {
                             </div>
                             <div className="table">
                                 {orders}
-
+                                <h2 className='total'>Total Balance: ${total}.00</h2>
                             </div>
                             <div className="tableFoot">
 
