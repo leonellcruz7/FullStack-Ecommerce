@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './ProductsView.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useContext } from 'react'
 import UserContext from './UserContext'

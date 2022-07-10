@@ -4,6 +4,8 @@ import './OrderView.css'
 
 export default function OrderView({ orderProp }) {
     const navigate = useNavigate()
+
+
     function view(e) {
         e.preventDefault()
 
