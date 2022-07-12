@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Brands from '../Components/Brands'
 import SearchResult from '../Components/SearchResult'
 import './Search.css'
 
@@ -35,7 +36,9 @@ export default function Search() {
                 <div className="row">
                     {result}
                 </div>
+
             </div>
+            <Brands />
         </div>
     )
 }

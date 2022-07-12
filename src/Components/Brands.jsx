@@ -7,27 +7,31 @@ export default function Brands() {
     const navigate = useNavigate()
 
     function nike(e) {
-        e.preventDefault()
+
         localStorage.setItem('search', 'nike')
         navigate('/search')
+        window.location.reload()
     }
 
     function adidas(e) {
-        e.preventDefault()
+
         localStorage.setItem('search', 'adidas')
         navigate('/search')
+        window.location.reload()
     }
 
     function hnm(e) {
-        e.preventDefault()
+
         localStorage.setItem('search', 'hnm')
         navigate('/search')
+        window.location.reload()
     }
 
     function bench(e) {
-        e.preventDefault()
+
         localStorage.setItem('search', 'bench')
         navigate('/search')
+        window.location.reload()
     }
 
     return (

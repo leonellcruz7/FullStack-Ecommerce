@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import AllProducts from '../Components/AllProducts'
+import Brands from '../Components/Brands'
 import './Products.css'
 
 export default function Products() {
@@ -63,6 +64,7 @@ export default function Products() {
                     </div>
                 </div>
             </div>
+            <Brands />
         </div>
 
 
