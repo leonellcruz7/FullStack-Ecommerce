@@ -1,10 +1,10 @@
 .featured {
-    background-color: rgb(231, 243, 247);
+    background-color: none;
     margin: 20px 0;
 }
 
 .featured img {
-    width: 70%;
+    width: 80%;
 }
 
 

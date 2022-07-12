@@ -10,8 +10,9 @@ export default function Home() {
 
     return (
         <div className="home">
-            <Filter />
+
             <Featured />
+            <Filter />
             <Testimonial />
             <Brands />
 
