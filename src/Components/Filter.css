@@ -54,12 +54,24 @@
         padding: 10px;
     }
 
-    .filter .col1 {}
+    .filter .col5 {
+        flex-basis: 25%;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .filter .col5 {
+        flex-basis: 33%;
+    }
 }
 
 @media only screen and (max-width:550px) {
     .filter button {
         padding: 10px 10px;
+    }
+
+    .filter .col5 {
+        flex-basis: 50%;
     }
 }
 
@@ -69,15 +81,13 @@
     }
 
     .filter .smCon {
-
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
-    .filter .row {
-        display: flex;
+    .filter .col1 {
         justify-content: center;
-
     }
 
     .filter {

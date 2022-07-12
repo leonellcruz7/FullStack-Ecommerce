@@ -41,9 +41,9 @@ export default function Filter() {
 
                 </div>
                 <div className="row">
-                    <div className="col1">
-                        {products}
-                    </div>
+
+                    {products}
+
                 </div>
             </div>
 
