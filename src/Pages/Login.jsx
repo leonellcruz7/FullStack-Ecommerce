@@ -71,7 +71,7 @@ export default function Login() {
                 <div className="row">
                     <div className="col2 slogan">
                         <div className="content slog">
-                            <h1>Shop at the comfort <br /> of your Home</h1>
+                            <h1><span className='shoptxt'> Shop</span> at the comfort <br /> of your <span className='hometxt'>Home</span> </h1>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi dignissimos sapiente nemo quaerat </p>
                         </div>
                     </div>
