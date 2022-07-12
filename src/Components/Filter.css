@@ -1,20 +1,41 @@
-.filter {
-    flex-basis: 20%;
-    justify-content: center;
-}
-
 .filter li {
     display: flex;
     margin: 10px 0;
+}
+
+.filter .col5 {
+    flex-basis: 20%;
+}
+
+.filter .col2 {
+    flex-basis: 80%;
 }
 
 .filter li input {
     margin: 0 10px;
 }
 
+.filter .content {
+    padding: 20px;
+}
+
 .filter li label {
     margin: 0 10px;
 }
+
+.filter button {
+    border-radius: 0;
+    padding: 10px 20px;
+}
+
+.filter .first {
+    border-radius: 13px 0px 0px 13px;
+}
+
+.filter .last {
+    border-radius: 0px 13px 13px 0px;
+}
+
 
 @media only screen and (max-width:830px) {
     .filter {

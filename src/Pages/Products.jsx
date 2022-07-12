@@ -11,7 +11,7 @@ export default function Products() {
     const [products, setProduct] = useState('')
 
     useEffect(() => {
-        fetch('https://ecommerce-leonell.herokuapp.com/products/all', {
+        fetch('http://localhost:4000/products/all', {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'

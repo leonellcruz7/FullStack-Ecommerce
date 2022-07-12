@@ -38,18 +38,18 @@ export default function NavBar() {
                         <li><input type="text" /><button>Search</button></li>
                     </ul>
                     {toggle ? <ul className='mobileNav'>
-                        <li><Link className='link' to='/'>home</Link></li>
-                        <li><Link className='link' to='/products'>products</Link></li>
+                        <li><Link className='link' to='/' onClick={e => setToggle(false)}>home</Link></li>
+                        <li><Link className='link' to='/products' onClick={e => setToggle(false)}>products</Link></li>
 
                         {isOnline ?
                             <Fragment>
-                                <li><Link className='link' to='/logout'>logout</Link></li>
-                                <li><Link className='link' to='/cart'>cart</Link></li>
+                                <li><Link className='link' to='/logout' onClick={e => setToggle(false)}>logout</Link></li>
+                                <li><Link className='link' to='/cart' onClick={e => setToggle(false)}>cart</Link></li>
                             </Fragment>
                             :
                             <Fragment>
-                                <li><Link className='link' to='/login'>login</Link></li>
-                                <li><Link className='link' to='/register'>register</Link></li>
+                                <li><Link className='link' to='/login' onClick={e => setToggle(false)}>login</Link></li>
+                                <li><Link className='link' to='/register' onClick={e => setToggle(false)}>register</Link></li>
                             </Fragment>
                         }
 

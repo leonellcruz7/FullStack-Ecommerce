@@ -37,9 +37,57 @@
 
 .productsView .buyBtn {
     padding: 10px 60px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .productsView .divider {
     background-color: rgb(54, 82, 109);
+}
+
+.productsView .alert {
+    color: rgb(128, 55, 55);
+}
+
+@media only screen and (max-width: 1300px) {
+    .productsView .smCon {
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 950px) {
+    .productsView .content {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .productsView .row {
+        flex-direction: column;
+    }
+
+    .productsView .content {
+        padding: 0 60px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .productsView .row {
+        flex-direction: column;
+    }
+
+    .productsView .content {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .productsView .product h1 {
+        font-size: 35px;
+    }
+
+    .productsView .product h2 {
+        font-size: 20px;
+    }
 }

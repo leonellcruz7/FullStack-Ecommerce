@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import './OrderView.css'
+import './OrderHistory.css'
 
-export default function OrderView({ orderProp }) {
+export default function OrderView({ historyProp }) {
     const navigate = useNavigate()
 
 
@@ -15,7 +15,7 @@ export default function OrderView({ orderProp }) {
                 'content-type': 'application/json'
             },
             body: JSON.stringify({
-                id: orderProp.productId
+                id: historyProp.productId
             })
         }).then(res => res.json()).then(data => {
 
@@ -29,36 +29,21 @@ export default function OrderView({ orderProp }) {
         })
     }
 
-    function remove(e) {
-        e.preventDefault()
-        console.log(orderProp._id)
-        fetch('http://localhost:4000/orders/deleteorder', {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: orderProp._id
-            })
-        }).then(res => res.json()).then(data => {
 
-            window.location.reload()
-        })
-    }
 
     return (
-        <div className="orderview">
+        <div className="orderhistory">
             <div className="details">
                 <div className='left'>
-                    <img src={orderProp.productImage} onClick={view} />
-                    <h3 onClick={view}>{orderProp.productName}</h3>
+                    <img src={historyProp.productImage} onClick={view} />
+                    <h3 onClick={view}>{historyProp.productName}</h3>
                 </div>
                 <div className='right'>
-                    <div className='text'>
-                        <h4>Price: ${orderProp.productPrice}.00</h4>
-                        <h4>x{orderProp.quantity}</h4>
-                    </div>
-                    <button className='remove' onClick={remove}>Remove</button>
+                    <h4>x{historyProp.quantity}</h4>
+                    <h4>Total: ${historyProp.productPrice}.00</h4>
+                    <h4>Status: {historyProp.status}</h4>
+
+
                 </div>
 
             </div>

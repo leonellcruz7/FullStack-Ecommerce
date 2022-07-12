@@ -18,10 +18,12 @@
     width: 100%;
 }
 
+
+
 .Cart .tableHead {
     background-color: rgb(57, 79, 104);
-    height: 60px;
-    border-radius: 89px 89px 0px 0px;
+    height: 30px;
+    border-radius: 20px 20px 0px 0px;
     box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.3);
     position: relative;
 }
@@ -29,16 +31,87 @@
 .Cart .table {
     background-color: rgb(224, 224, 224);
     padding: 30px;
+    margin: 0 3px;
     text-align: end;
 }
 
 .Cart .tableFoot {
     background-color: rgb(57, 79, 104);
-    height: 60px;
-    border-radius: 0px 0px 89px 89px;
+    height: 30px;
+    border-radius: 0px 0px 30px 30px;
     box-shadow: 0px -10px 20px -3px rgba(0, 0, 0, 0.3);
 }
 
 .Cart .total {
     font-size: 25px;
+}
+
+.Cart .totalbalance {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.Cart .totalbalance button {
+    padding: 10px 30px;
+    margin: 0 10px;
+}
+
+.Cart .orderhistory {
+    flex-basis: 100%;
+}
+
+@media only screen and (max-width: 1350px) {
+    .Cart .smCon {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .Cart .row {
+        flex-direction: column;
+    }
+
+    .Cart .content {
+        padding: 10px 50px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .Cart .table {
+
+        padding: 30px 5px;
+
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .Cart .total {
+        font-size: 20px;
+    }
+
+    .Cart .totalbalance {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .Cart .totalbalance h2 {
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    .Cart .col1 {
+        flex-basis: 90%;
+    }
+
+    .Cart .content {
+        padding: 20px;
+        width: 100%;
+    }
 }

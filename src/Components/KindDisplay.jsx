@@ -1,17 +1,13 @@
-import React from 'react'
-import './AllProducts.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
-import ProductView from './ProductView'
+import './KindDisplay.css'
 
-export default function AllProducts({ productProp }) {
-    const img = productProp.image
+export default function KindDisplay({ productProp }) {
     const navigate = useNavigate()
 
     function view(e) {
         e.preventDefault()
-
         fetch('http://localhost:4000/products/getbyid', {
             method: 'POST',
             headers: {
@@ -30,13 +26,11 @@ export default function AllProducts({ productProp }) {
             localStorage.setItem('image', data.image)
             navigate(`/product/${productProp._id}`)
         })
-
     }
     return (
-
-        <div className="col5 all">
+        <div className="col5 kind">
             <div className="content">
-                <img src={img} onClick={view} />
+                <img src={productProp.image} alt="" onClick={view} />
                 <h4>{productProp.name}</h4>
                 <FontAwesomeIcon className='star' icon="fa-solid fa-star" />
                 <FontAwesomeIcon className='star' icon="fa-solid fa-star" />
@@ -46,6 +40,5 @@ export default function AllProducts({ productProp }) {
                 <p>Price: ${productProp.price}.00</p>
             </div>
         </div>
-
     )
 }

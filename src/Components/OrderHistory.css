@@ -1,4 +1,4 @@
-.orderview .details {
+.orderhistory .details {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,21 +6,14 @@
 
 }
 
-.orderview .details .right .text {
-    display: flex;
-    flex-direction: row;
-    margin: 10px 0;
-
-}
-
-.orderview .details .left {
+.orderhistory .details .left {
     display: flex;
     align-items: center;
 
     flex-basis: 50%;
 }
 
-.orderview .details .right {
+.orderhistory .details .right {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -28,30 +21,30 @@
     flex-basis: 50%;
 }
 
-.orderview .details .right h3,
-.orderview .details .right h4,
-.orderview .details .right button {
+.orderhistory .details .right h3,
+.orderhistory .details .right h4,
+.orderhistory .details .right button {
     margin: 0 10px;
 }
 
-.orderview h3,
-.orderview img {
+.orderhistory h3,
+.orderhistory img {
     cursor: pointer;
 }
 
-.orderview button {
+.orderhistory button {
     padding: 7px 20px;
 }
 
-.orderview .remove {
+.orderhistory .remove {
     background-color: rgb(128, 50, 67);
 }
 
-.orderview .checkout {
+.orderhistory .checkout {
     background-color: rgb(129, 160, 83);
 }
 
-.orderview img {
+.orderhistory img {
     width: 15%;
     border-radius: 10px;
     margin: 0 20px;
@@ -59,12 +52,12 @@
     transition: .2s;
 }
 
-.orderview img:hover {
+.orderhistory img:hover {
     transform: scale(1.03);
 }
 
 @media only screen and (max-width: 650px) {
-    .orderview img {
+    .orderhistory img {
         width: 20%;
         border-radius: 10px;
         margin: 0 15px;
@@ -72,21 +65,21 @@
         transition: .2s;
     }
 
-    .orderview h3,
-    .orderview h4 {
+    .orderhistory h3,
+    .orderhistory h4 {
         font-size: 14px;
     }
 }
 
 @media only screen and (max-width: 550px) {
-    .orderview .details {
+    .orderhistory .details {
         flex-direction: column;
         align-items: center;
         width: 100%;
 
     }
 
-    .orderview .details .left {
+    .orderhistory .details .left {
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -94,12 +87,12 @@
         flex-basis: 100%;
     }
 
-    .orderview .details .left img {
+    .orderhistory .details .left img {
         margin: 20px 0;
         width: 80%;
     }
 
-    .orderview .details .right {
+    .orderhistory .details .right {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -107,21 +100,21 @@
         flex-basis: 100%;
     }
 
-    .orderview .details .right .text {
+    .orderhistory .details .right .text {
         display: flex;
         margin: 10px 0;
     }
 
-    .orderview h3,
-    .orderview h4 {
+    .orderhistory h3,
+    .orderhistory h4 {
         font-size: 20px;
     }
 
-    .orderview .divider {
+    .orderhistory .divider {
         width: 70%;
     }
 
-    .orderview {
+    .orderhistory {
         display: flex;
         flex-direction: column;
         align-items: center;

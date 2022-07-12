@@ -26,16 +26,16 @@ export default function ProductView() {
     }
 
     useEffect(() => {
-        if (amount == 0 || product.availableStock < amount) {
+        if (amount == 0 || product.availableStock < amount || localStorage.getItem('token') == null) {
             setActive(false)
         }
         else {
             setActive(true)
         }
-    }, [amount])
+    }, [amount, product])
 
     useEffect(() => {
-        fetch('https://ecommerce-leonell.herokuapp.com/products/getbyid', {
+        fetch('http://localhost:4000/products/getbyid', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,8 @@ export default function ProductView() {
 
     function buy(e) {
         e.preventDefault()
-        fetch('https://ecommerce-leonell.herokuapp.com/orders/addtocart', {
+        setAmount(0)
+        fetch('http://localhost:4000/orders/addtocart', {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -93,11 +94,12 @@ export default function ProductView() {
                                 <button onClick={inc}><FontAwesomeIcon icon="fa-solid fa-plus" /></button>
                             </div>
                             {active ? <button className='buyBtn' onClick={buy}>Add to Cart</button> : <button className='buyBtn inactive' onClick={buy} disabled>Add to Cart</button>}
+                            {(localStorage.getItem('token') == null) ? <h4 className='alert'>Please login first</h4> : <h4 hidden>Login first</h4>}
 
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

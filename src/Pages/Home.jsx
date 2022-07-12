@@ -3,7 +3,6 @@ import './Home.css'
 import Featured from '../Components/Featured'
 import Categories from '../Components/Categories'
 import Filter from '../Components/Filter'
-import ProductSection from '../Components/ProductSection'
 import Testimonial from '../Components/Testimonial'
 import Brands from '../Components/Brands'
 
@@ -12,15 +11,9 @@ export default function Home() {
 
     return (
         <div className="home">
-            <Categories />
+            <Filter />
             <Featured />
 
-            <div className="smCon products">
-                <div className="row">
-                    <Filter />
-                    <ProductSection />
-                </div>
-            </div>
             <Testimonial />
             <Brands />
 
