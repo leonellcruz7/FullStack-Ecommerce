@@ -5,8 +5,26 @@
 
 }
 
-.navbar h2 {
-    font-size: 30px;
+.navbar img {
+    width: 90px;
+}
+
+.navbar .online {
+    color: rgb(209, 91, 23);
+    font-weight: 400;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+.navbar .shop {
+    color: rgb(13, 106, 182);
+    font-family: 'Edu TAS Beginner', cursive;
+    font-weight: 700;
+}
+
+.navbar .logosec {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .navbar ul {
@@ -34,15 +52,15 @@
     padding: 5px 10px;
     border-radius: 12px 0px 0px 12px;
     border: none;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
     width: 400px;
 }
 
 .navbar li button {
     border-radius: 0px 12px 12px 0px;
-    padding: 8px 6px;
+    padding: 7px 6px;
     font-size: 12px;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
 .navbar .row {
@@ -203,6 +221,16 @@
         justify-content: center;
         align-items: center;
         padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .navbar .online {
+        display: none;
+    }
+
+    .navbar .shop {
+        display: none;
     }
 }
 

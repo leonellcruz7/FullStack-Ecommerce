@@ -17,6 +17,7 @@
 .featured .content h1 {
     margin: 12px 0;
     line-height: 60px;
+    color: rgb(23, 60, 95);
 }
 
 .featured button {

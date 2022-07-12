@@ -16,7 +16,7 @@ export default function Featured() {
                     <div className="col2">
                         <div className="content">
                             <p>Great Deals only at Online Store</p>
-                            <h1>Shop Fashion Online    </h1>
+                            <h1>Shop Fashion Online.</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore distinctio quos in rerum ducimus quis? Quidem commodi ad aspernatur rem qui voluptas facilis consequuntur perferendis excepturi, deserunt eveniet.</p>
                             <button onClick={e => navigate('/products')}>Shop Now</button>
                         </div>
