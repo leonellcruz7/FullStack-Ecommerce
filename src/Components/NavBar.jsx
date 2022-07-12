@@ -40,8 +40,7 @@ export default function NavBar() {
             <div className="mdCon">
                 <div className="row">
                     <div className="logosec" onClick={e => navigate('/')}>
-                        <img src={require('../img/logo.png')} alt="" />
-                        <h2 className='online'>Online </h2> <h2 className='shop'>Shop</h2>
+                        <h2 className='online'>Online <span> Shop.</span></h2>
                     </div>
 
                     <ul className='desktopNav'>

@@ -9,16 +9,12 @@
     width: 90px;
 }
 
-.navbar .online {
-    color: rgb(209, 91, 23);
-    font-weight: 400;
-    font-family: 'Edu TAS Beginner', cursive;
+.navbar .logosec .online {
+    color: rgb(105, 25, 25);
 }
 
-.navbar .shop {
-    color: rgb(13, 106, 182);
-    font-family: 'Edu TAS Beginner', cursive;
-    font-weight: 700;
+.navbar .logosec .online span {
+    color: rgb(235, 179, 74);
 }
 
 .navbar .logosec {
