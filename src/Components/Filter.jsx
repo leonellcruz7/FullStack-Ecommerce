@@ -8,7 +8,7 @@ export default function Filter() {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:4000/products/getbykind', {
+        fetch('https://ecommerce-leonell.herokuapp.com/products/getbykind', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

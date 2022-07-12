@@ -35,7 +35,7 @@ export default function ProductView() {
     }, [amount, product])
 
     useEffect(() => {
-        fetch('http://localhost:4000/products/getbyid', {
+        fetch('https://ecommerce-leonell.herokuapp.com/products/getbyid', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -51,7 +51,7 @@ export default function ProductView() {
     function buy(e) {
         e.preventDefault()
         setAmount(0)
-        fetch('http://localhost:4000/orders/addtocart', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/addtocart', {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`,

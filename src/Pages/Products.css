@@ -10,13 +10,24 @@
 
 .products .col6 {
     flex-basis: 20%;
+    justify-content: center;
 
 }
 
 .products .col2 {
     flex-basis: 80%;
-    justify-content: center;
+    justify-content: start;
 
+}
+
+.products .prodcat {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.products .prodcat button {
+    border-radius: 0;
 }
 
 @media only screen and (max-width:1600px) {
@@ -32,13 +43,31 @@
 }
 
 @media only screen and (max-width:650px) {
-    .products .col6 {
-        display: none;
+    .products .col6 .prodcat {
+        flex-direction: row;
+        width: 100%;
     }
+
+    .products .col6 .prodcat button {
+        padding: 10px 30px;
+    }
+
+    .products .col6 {
+        flex-basis: 90%;
+
+    }
+
+
 
     .products .col2 {
         flex-basis: 90%;
         justify-content: center;
 
+    }
+}
+
+@media only screen and (max-width:390px) {
+    .products .col6 .prodcat button {
+        padding: 10px 10px;
     }
 }

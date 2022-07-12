@@ -13,7 +13,7 @@ export default function Cart() {
 
     useEffect(() => {
 
-        fetch('http://localhost:4000/orders/getmyorder', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/getmyorder', {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -35,7 +35,7 @@ export default function Cart() {
     }, [total, prices])
 
     useEffect(() => {
-        fetch('http://localhost:4000/orders/orderhistory', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/orderhistory', {
             method: 'GET',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -52,7 +52,7 @@ export default function Cart() {
     function checkout(e) {
         e.preventDefault()
 
-        fetch('http://localhost:4000/orders/checkout', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/checkout', {
             method: 'PATCH',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`

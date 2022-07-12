@@ -21,7 +21,7 @@ export default function Login() {
     function login(e) {
         e.preventDefault()
 
-        fetch('http://localhost:4000/users/login', {
+        fetch('https://ecommerce-leonell.herokuapp.com/users/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,7 +34,7 @@ export default function Login() {
             console.log(data)
             if (data) {
                 localStorage.setItem('token', data.access)
-                fetch('http://localhost:4000/users/details', {
+                fetch('https://ecommerce-leonell.herokuapp.com/users/details', {
                     method: 'GET',
                     headers: {
                         Authorization: `Bearer ${data.access}`

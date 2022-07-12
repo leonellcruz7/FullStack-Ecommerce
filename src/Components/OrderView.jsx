@@ -9,7 +9,7 @@ export default function OrderView({ orderProp }) {
     function view(e) {
         e.preventDefault()
 
-        fetch('http://localhost:4000/products/getbyid', {
+        fetch('https://ecommerce-leonell.herokuapp.com/products/getbyid', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -32,7 +32,7 @@ export default function OrderView({ orderProp }) {
     function remove(e) {
         e.preventDefault()
         console.log(orderProp._id)
-        fetch('http://localhost:4000/orders/deleteorder', {
+        fetch('https://ecommerce-leonell.herokuapp.com/orders/deleteorder', {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'
