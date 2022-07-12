@@ -76,7 +76,7 @@ export default function Login() {
                         </div>
                     </div>
                     <div className="col2 loginform">
-                        <div className="content">
+                        <form className="content" onSubmit={login}>
                             <div className="title"><h2>Login     <FontAwesomeIcon className='idIcon' icon="fa-solid fa-id-card" /></h2></div>
                             <div className="card">
                                 <div className="email">
@@ -95,7 +95,7 @@ export default function Login() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
