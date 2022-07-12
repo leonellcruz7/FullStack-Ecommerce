@@ -27,7 +27,6 @@ export default function NavBar() {
     })
 
     function search(e) {
-        e.preventDefault()
         setToggle(false)
 
         localStorage.setItem('search', searchValue.toLowerCase())
