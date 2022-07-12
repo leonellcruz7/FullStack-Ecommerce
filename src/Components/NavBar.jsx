@@ -11,6 +11,7 @@ import { useEffect } from 'react'
 export default function NavBar() {
     const [toggle, setToggle] = useState(false)
     const [isOnline, setIsOnline] = useState(false)
+    const [searchValue, setSearchValue] = useState()
 
     function show() {
         setToggle(!toggle)
@@ -25,6 +26,13 @@ export default function NavBar() {
         }
     })
 
+    function search(e) {
+        e.preventDefault()
+
+        localStorage.setItem('search', searchValue.toLowerCase())
+        navigate('/search')
+    }
+
     const navigate = useNavigate()
     return (
         <div className="navbar">
@@ -35,7 +43,7 @@ export default function NavBar() {
                         <li><Link className='link' to='/'>home</Link></li>
                         <li><Link className='link' to='/products'>products</Link></li>
 
-                        <li><input type="text" /><button>Search</button></li>
+                        <li><form onSubmit={search}> <input type="text" placeholder='Brand, Men or Women.. Top or Shorts..' onChange={e => setSearchValue(e.target.value)} /><button onClick={search}>Search</button></form></li>
                     </ul>
                     {toggle ? <ul className='mobileNav'>
                         <li><Link className='link' to='/' onClick={e => setToggle(false)}>home</Link></li>

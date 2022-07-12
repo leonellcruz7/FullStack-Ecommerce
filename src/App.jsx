@@ -14,6 +14,7 @@ import { useContext } from 'react';
 import { useState } from 'react';
 import ProductView from './Components/ProductView';
 import Cart from './Pages/Cart';
+import Search from './Pages/Search';
 library.add(faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown, faMinus, faPlus)
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/logout' element={<Logout />} />
           <Route path='/product/:productId' element={<ProductView />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/search' element={<Search />} />
 
         </Routes>
       </UserContext.Provider>
