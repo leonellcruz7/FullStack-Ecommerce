@@ -1,0 +1,87 @@
+.admin {
+    padding: 130px 0;
+    background-color: rgb(188, 218, 228);
+}
+
+.admin .box {
+    background-color: rgb(149, 208, 241);
+    display: flex;
+    border-radius: 23px 23px 23px 23px;
+    margin: 10px 0;
+
+
+}
+
+.admin .card {
+    box-shadow: 0px 0px 22px 8px rgba(0, 0, 0, 0.26);
+}
+
+.admin .box .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 75px;
+    padding: 8px 0px;
+    background-color: rgb(44, 68, 99);
+    border-radius: 23px 23px 23px 23px;
+    color: #fff;
+
+}
+
+.admin .box .details {
+    padding: 10px 20px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.admin .content {
+    width: 100%;
+}
+
+
+.admin .types {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.admin .category {
+    display: flex;
+    width: 100%;
+}
+
+.admin .left {
+    margin-right: 5px;
+}
+
+.admin .right {
+    margin-left: 5px;
+}
+
+.admin .upload {
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.admin .content {
+    padding: 30px;
+
+}
+
+.admin .title {
+    justify-content: start;
+    width: 100%;
+    color: rgb(14, 47, 75);
+}
+
+.admin .divider {
+    width: 80%;
+
+
+
+}

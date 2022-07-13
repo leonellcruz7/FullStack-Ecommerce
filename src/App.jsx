@@ -15,6 +15,7 @@ import { useState } from 'react';
 import ProductView from './Components/ProductView';
 import Cart from './Pages/Cart';
 import Search from './Pages/Search';
+import Admin from './Pages/Admin';
 library.add(faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown, faMinus, faPlus)
 
 
@@ -31,7 +32,7 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
-
+          <Route path='/admin' element={<Admin />} />
           <Route path='/products' element={<Products />} />
           <Route path='/register' element={<Register />} />
           <Route path='/logout' element={<Logout />} />

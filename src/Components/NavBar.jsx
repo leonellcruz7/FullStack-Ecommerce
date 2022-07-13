@@ -43,12 +43,14 @@ export default function NavBar() {
                     </div>
 
                     <ul className='desktopNav'>
+                        <li><Link className='link' to='/admin'>admin dashboard</Link></li>
                         <li><Link className='link' to='/'>home</Link></li>
                         <li><Link className='link' to='/products'>products</Link></li>
 
                         <li><form onSubmit={search}> <input type="text" placeholder='Brand, Men or Women.. Top or Shorts..' onChange={e => setSearchValue(e.target.value)} /><button onClick={search}>Search</button></form></li>
                     </ul>
                     {toggle ? <ul className='mobileNav'>
+                        <li><Link className='link' to='/admin' onClick={e => setToggle(false)}>admin dashboard</Link></li>
                         <li><form onSubmit={search}> <input type="text" placeholder='Brand, Men or Women.. Top or Shorts..' onChange={e => setSearchValue(e.target.value)} /><button onClick={search}>Search</button></form></li>
                         <li><Link className='link' to='/' onClick={e => setToggle(false)}>home</Link></li>
                         <li><Link className='link' to='/products' onClick={e => setToggle(false)}>products</Link></li>
