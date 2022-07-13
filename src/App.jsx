@@ -16,6 +16,7 @@ import ProductView from './Components/ProductView';
 import Cart from './Pages/Cart';
 import Search from './Pages/Search';
 import Admin from './Pages/Admin';
+import Update from './Pages/Update';
 library.add(faShoppingCart, faIdCard, faStar, faQuoteRight, faCircleChevronDown, faMinus, faPlus, faArrowRightLong)
 
 
@@ -42,6 +43,7 @@ function App() {
           <Route path='/product/:productId' element={<ProductView />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/search' element={<Search />} />
+          <Route path='/update/:productId' element={<Update />} />
 
         </Routes>
       </UserContext.Provider>

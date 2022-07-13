@@ -50,7 +50,13 @@ export default function Login() {
                     })
 
                     alert('You have successfully logged in!')
-                    navigate('/')
+                    if (data.isAdmin) {
+                        navigate('/admin')
+                    }
+                    else {
+                        navigate('/')
+                    }
+
 
                 })
             }

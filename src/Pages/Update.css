@@ -1,0 +1,58 @@
+.update {
+    background-color: rgb(188, 218, 228);
+    padding-top: 20px;
+}
+
+.update input {
+    padding: 10px 15px;
+}
+
+.update .number {
+    display: flex;
+    align-items: center;
+
+}
+
+.update .left {
+    margin-right: 5px;
+
+}
+
+.update .center {
+    margin: 5px 5px;
+
+}
+
+.update .last {
+    margin-left: 5px;
+}
+
+.update .class {
+    display: flex;
+    align-items: center;
+}
+
+.update .one {
+    margin-right: 5px;
+
+}
+
+.update .two {
+    margin: 5px 5px;
+}
+
+.update .smCon {
+    padding: 80px 0;
+}
+
+.update .col2 {
+    padding: 40px;
+}
+
+
+
+.update .buttons {
+    display: flex;
+    justify-content: end;
+    margin: 20px 0;
+}
