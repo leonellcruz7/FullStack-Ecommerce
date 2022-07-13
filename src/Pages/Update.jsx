@@ -55,17 +55,23 @@ export default function Update() {
         <div className="update">
             <div className="smCon">
                 <div className="row">
-                    <div className="col2">
-                        <div className="content">
+                    <div className="col2 image">
+                        <div className="content image">
                             <img src={localStorage.getItem('image')} alt="" />
                         </div>
                     </div>
                     <div className="col2">
                         <div className="content">
-                            <p>Name</p>
-                            <input type="text" placeholder={name} onChange={e => setName(e.target.value)} />
-                            <p>Description</p>
-                            <input type="text" placeholder={description} onChange={e => setDescription(e.target.value)} />
+                            <div className='top'>
+                                <p>Name</p>
+                                <input type="text" placeholder={name} onChange={e => setName(e.target.value)} />
+                            </div>
+
+                            <div className='top'>
+                                <p>Description</p>
+                                <input type="text" placeholder={description} onChange={e => setDescription(e.target.value)} />
+                            </div>
+
                             <div className="number">
                                 <div className='left'>
                                     <p>Price</p>

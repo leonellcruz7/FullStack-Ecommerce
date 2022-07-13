@@ -7,6 +7,16 @@
     padding: 10px 15px;
 }
 
+.update img {
+    width: 70%;
+}
+
+.update .image {
+    display: flex;
+    justify-content: end;
+}
+
+
 .update .number {
     display: flex;
     align-items: center;
@@ -55,4 +65,12 @@
     display: flex;
     justify-content: end;
     margin: 20px 0;
+}
+
+.update .buttons button {
+    padding: 10px 50px;
+}
+
+.update .top {
+    margin: 5px 0;
 }
