@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Admin.css'
 import axios from 'axios'
 
 export default function Admin() {
+
 
     const [imageFile, setImageFile] = useState('')
     const [name, setName] = useState('')
@@ -23,25 +24,31 @@ export default function Admin() {
 
         axios.post('https://api.cloudinary.com/v1_1/dyecs1c3j/image/upload', formData).then(res => setImage(res.data.secure_url))
 
-        fetch('https://ecommerce-leonell.herokuapp.com/products/addProduct', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                description: description,
-                category: category,
-                kind: kind,
-                brand: brand,
-                price: price,
-                image: image,
-                availableStock: stock
-            })
-        }).then(res => res.json()).then(data => {
-            console.log(data)
-        })
+
     }
+
+    useEffect(() => {
+        if (image !== '') {
+            fetch('https://ecommerce-leonell.herokuapp.com/products/addProduct', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    description: description,
+                    category: category,
+                    kind: kind,
+                    brand: brand,
+                    price: price,
+                    image: image,
+                    availableStock: stock
+                })
+            }).then(res => res.json()).then(data => {
+                console.log(data)
+            })
+        }
+    }, [image])
     return (
         <div className="admin">
             <div className="smCon">
