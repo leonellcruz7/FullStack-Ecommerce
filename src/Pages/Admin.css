@@ -41,6 +41,10 @@
     width: 100%;
 }
 
+.admin .alert {
+    color: rgb(121, 42, 42);
+}
+
 
 .admin .types {
     display: flex;
@@ -89,4 +93,9 @@
 .admin .price {
     display: flex;
     width: 100%;
+}
+
+.admin .aaa {
+    justify-content: center;
+    margin: 20px 0;
 }

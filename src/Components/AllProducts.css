@@ -9,6 +9,22 @@
     margin: 12px;
 }
 
+.all .content .pic {
+    min-height: 245px;
+    max-height: 245px;
+    overflow: hidden;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all .content img {
+    width: auto;
+    height: 245px;
+}
+
+
 @media only screen and (max-width:1350px) {
     .all .col5 {
         flex-basis: 25%;

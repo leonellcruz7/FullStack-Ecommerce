@@ -10,11 +10,10 @@ export default function Login() {
 
     const navigate = useNavigate()
 
-    const { user, setUser } = useContext(UserContext)
-
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [active, setActive] = useState(false)
+    const { user, setUser } = useContext(UserContext)
 
 
 
@@ -45,6 +44,11 @@ export default function Login() {
 
                     }
                     localStorage.setItem('name', data.firstName)
+                    localStorage.setItem('isAdmin', data.isAdmin)
+                    setUser({
+                        isAdmin: localStorage.getItem('isAdmin')
+                    })
+
                     alert('You have successfully logged in!')
                     navigate('/')
 

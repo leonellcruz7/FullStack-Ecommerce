@@ -1,0 +1,31 @@
+.listings {}
+
+.listings .content {
+    display: flex;
+}
+
+.listings .detail {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.listings img {
+    width: 50%;
+}
+
+.listings .listBtn {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.listings .btn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.listings .remove {
+    background-color: brown;
+}

@@ -6,7 +6,6 @@ import { useContext } from 'react'
 import UserContext from './UserContext'
 
 export default function ProductView() {
-    const { user, setUser } = useContext(UserContext)
 
     const [amount, setAmount] = useState(0)
     const [product, setProduct] = useState([])

@@ -36,7 +36,10 @@ export default function AllProducts({ productProp }) {
 
         <div className="col5 all">
             <div className="content">
-                <img src={img} onClick={view} />
+                <div className="pic">
+                    <img src={img} onClick={view} />
+                </div>
+
                 <h4>{productProp.name}</h4>
                 <FontAwesomeIcon className='star' icon="fa-solid fa-star" />
                 <FontAwesomeIcon className='star' icon="fa-solid fa-star" />

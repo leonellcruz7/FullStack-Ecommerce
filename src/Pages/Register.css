@@ -9,6 +9,19 @@
     padding: 20px 0;
 }
 
+.register .seller {
+    transform: translateY(40px);
+    cursor: pointer;
+    transition: .1s ease;
+
+}
+
+.register .seller:hover {
+    font-size: 17px;
+
+
+}
+
 .register .idIcon {
     margin: 0 10px;
 }
@@ -21,6 +34,20 @@
     border-radius: 10px 10px 0px 0px;
     color: rgb(255, 255, 255);
 
+}
+
+.register .choose {
+    display: flex;
+    align-items: center;
+}
+
+.register .choose .select {
+    margin: 5px;
+    color: rgb(29, 54, 77);
+}
+
+.register .sellertitle {
+    background-color: rgb(43, 114, 70);
 }
 
 .register .name,
