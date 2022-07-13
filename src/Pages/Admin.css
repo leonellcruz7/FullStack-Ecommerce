@@ -85,3 +85,8 @@
 
 
 }
+
+.admin .price {
+    display: flex;
+    width: 100%;
+}

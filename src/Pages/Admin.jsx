@@ -1,7 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Admin.css'
+import axios from 'axios'
 
 export default function Admin() {
+
+    const [imageFile, setImageFile] = useState('')
+    const [name, setName] = useState('')
+    const [description, setDescription] = useState('')
+    const [category, setCategory] = useState('')
+    const [price, setPrice] = useState('')
+    const [image, setImage] = useState('')
+    const [stock, setStock] = useState('')
+    const [kind, setKind] = useState('')
+    const [brand, setBrand] = useState('')
+
+
+    function submit(e) {
+        e.preventDefault()
+        const formData = new FormData()
+        formData.append('file', imageFile)
+        formData.append('upload_preset', 'vuglmxxy')
+
+        axios.post('https://api.cloudinary.com/v1_1/dyecs1c3j/image/upload', formData).then(res => setImage(res.data.secure_url))
+
+        fetch('https://ecommerce-leonell.herokuapp.com/products/addProduct', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                description: description,
+                category: category,
+                kind: kind,
+                brand: brand,
+                price: price,
+                image: image,
+                availableStock: stock
+            })
+        }).then(res => res.json()).then(data => {
+            console.log(data)
+        })
+    }
     return (
         <div className="admin">
             <div className="smCon">
@@ -50,21 +90,25 @@ export default function Admin() {
                                 </div>
 
 
-                                <input type="text" placeholder='Name' />
-                                <input type="text" placeholder='Description' />
+                                <input type="text" placeholder='Name' onChange={e => setName(e.target.value)} />
+                                <input type="text" placeholder='Description' onChange={e => setDescription(e.target.value)} />
 
 
                                 <div className="types">
-                                    <input className='left' type="text" placeholder='Brand' />
-                                    <input className='right' type="dropdown" placeholder='Kind' />
+                                    <input className='left' type="text" placeholder='Brand' onChange={e => setBrand(e.target.value)} />
+                                    <input className='right' type="dropdown" placeholder='Kind' onChange={e => setKind(e.target.value)} />
 
                                 </div>
                                 <div className="category">
-                                    <input className='left' type="text" placeholder='Category' />
-                                    <input className='right' type="file" />
+                                    <input className='left' type="text" placeholder='Category' onChange={e => setCategory(e.target.value)} />
+                                    <input className='right' type="number" placeholder='Quantity' onChange={e => setStock(e.target.value)} />
+                                </div>
+                                <div className="price">
+                                    <input className='left' type="number" placeholder='Price' onChange={e => setPrice(e.target.value)} />
+                                    <input className='right' type="file" onChange={e => setImageFile(e.target.files[0])} />
                                 </div>
                                 <div className="upload">
-                                    <button>Upload Product</button>
+                                    <button onClick={submit}>Upload Product</button>
                                 </div>
 
 
