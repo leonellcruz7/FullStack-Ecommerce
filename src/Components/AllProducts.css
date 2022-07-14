@@ -10,7 +10,7 @@
 }
 
 .all .content .pic {
-    min-height: 245px;
+    min-height: 200px;
     max-height: 245px;
     overflow: hidden;
     max-width: 200px;
@@ -19,10 +19,7 @@
     align-items: center;
 }
 
-.all .content img {
-    width: auto;
-    height: 245px;
-}
+.all .content img {}
 
 
 @media only screen and (max-width:1350px) {
@@ -43,11 +40,13 @@
     }
 }
 
-@media only screen and (max-width:370px) {
+@media only screen and (max-width:390px) {
 
     h4,
     p,
     .star {
         font-size: 13px;
     }
+
+
 }

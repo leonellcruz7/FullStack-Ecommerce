@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Featured.css'
 import { useNavigate } from 'react-router-dom'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
+
 
 export default function Featured() {
+    const { ref, inView } = useInView()
+    const animation = useAnimation()
+
+    useEffect(() => {
+        console.log(inView)
+    }, [inView])
+
+
     const navigate = useNavigate()
     return (
         <div className="featured">
@@ -15,7 +27,7 @@ export default function Featured() {
                     </div>
                     <div className="col2">
                         <div className="content">
-                            <p>Great Deals only at Online Store</p>
+                            <motion.p ref={ref}>Great Deals only at Online Store</motion.p>
                             <h1>Shop Fashion Online.</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore distinctio quos in rerum ducimus quis? Quidem commodi ad aspernatur rem qui voluptas facilis consequuntur perferendis excepturi, deserunt eveniet.</p>
                             <button onClick={e => navigate('/products')}>Shop Now</button>
