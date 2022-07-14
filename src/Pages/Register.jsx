@@ -100,36 +100,35 @@ export default function Register() {
                             <div className="content">
                                 <div className="title sellertitle"><h2>I am a Seller <FontAwesomeIcon className='idIcon' icon="fa-solid fa-id-card" /></h2></div>
                                 <div className="card">
-                                    <div className="name">
-                                        <input className='nameTxt' type="text" placeholder='First Name' value={first} onChange={e => setFirst(e.target.value)} />
-                                        <input className='nameTxt' type="text" placeholder='Last Name' value={last} onChange={e => setLast(e.target.value)} />
-                                    </div>
-                                    <div className="address">
-                                        <input type="text" placeholder='Complete Adress' value={address} onChange={e => setAddress(e.target.value)} />
-                                    </div>
-                                    <div className="contact">
-
-                                        <input className='email' type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
-                                        {(emailTaken) ? <p className='emailAlert'>Email Taken</p> : <p className='emailAlert' hidden>Email Taken</p>}
-
-
-
-
-                                        <input className='mobile' type="text" placeholder='Mobile Number' value={mobile} onChange={e => setMobile(e.target.value)} />
-                                    </div>
-                                    <div className="password">
-                                        <input className='nameTxt' type="password" placeholder='Password' value={pass1} onChange={e => setPass1(e.target.value)} />
-                                        <input className='nameTxt' type="password" placeholder='Confirm Password' value={pass2} onChange={e => setPass2(e.target.value)} />
-                                    </div>
-                                    <div className="divider"></div>
-                                    <div className="footer">
-                                        <div className="already">
-                                            <p>Already have an account? <Link className='link' to='/login'>Login</Link></p>
+                                    <form onSubmit={register}>
+                                        <div className="name">
+                                            <input className='nameTxt' type="text" placeholder='First Name' value={first} onChange={e => setFirst(e.target.value)} />
+                                            <input className='nameTxt' type="text" placeholder='Last Name' value={last} onChange={e => setLast(e.target.value)} />
                                         </div>
-                                        <div className="create">
-                                            {active ? <button onClick={register}>Create Account</button> : <button className='inactive' disabled>Create Account</button>}
+                                        <div className="address">
+                                            <input type="text" placeholder='Complete Adress' value={address} onChange={e => setAddress(e.target.value)} />
                                         </div>
-                                    </div>
+                                        <div className="contact">
+
+                                            <input className='email' type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                                            {(emailTaken) ? <p className='emailAlert'>Email Taken</p> : <p className='emailAlert' hidden>Email Taken</p>}
+
+                                            <input className='mobile' type="text" placeholder='Mobile Number' value={mobile} onChange={e => setMobile(e.target.value)} />
+                                        </div>
+                                        <div className="password">
+                                            <input className='nameTxt' type="password" placeholder='Password' value={pass1} onChange={e => setPass1(e.target.value)} />
+                                            <input className='nameTxt' type="password" placeholder='Confirm Password' value={pass2} onChange={e => setPass2(e.target.value)} />
+                                        </div>
+                                        <div className="divider"></div>
+                                        <div className="footer">
+                                            <div className="already">
+                                                <p>Already have an account? <Link className='link' to='/login'>Login</Link></p>
+                                            </div>
+                                            <div className="create">
+                                                {active ? <button onClick={register}>Create Account</button> : <button className='inactive' disabled>Create Account</button>}
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -140,39 +139,36 @@ export default function Register() {
                             <div className="content">
                                 <div className="title"><h2>I am a Customer <FontAwesomeIcon className='idIcon' icon="fa-solid fa-id-card" /></h2></div>
                                 <div className="card">
-                                    <div className="name">
-                                        <input className='nameTxt' type="text" placeholder='First Name' value={first} onChange={e => setFirst(e.target.value)} />
-                                        <input className='nameTxt' type="text" placeholder='Last Name' value={last} onChange={e => setLast(e.target.value)} />
-                                    </div>
-                                    <div className="address">
-                                        <input type="text" placeholder='Complete Adress' value={address} onChange={e => setAddress(e.target.value)} />
-                                    </div>
-                                    <div className="contact">
-
-
-                                        <input className='email' type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
-                                        {(emailTaken) ? <p className='emailAlert'>Email Taken</p> : <p className='emailAlert' hidden>Email Taken</p>}
-
-
-
-
-
-
-                                        <input className='mobile' type="text" placeholder='Mobile Number' value={mobile} onChange={e => setMobile(e.target.value)} />
-                                    </div>
-                                    <div className="password">
-                                        <input className='nameTxt' type="password" placeholder='Password' value={pass1} onChange={e => setPass1(e.target.value)} />
-                                        <input className='nameTxt' type="password" placeholder='Confirm Password' value={pass2} onChange={e => setPass2(e.target.value)} />
-                                    </div>
-                                    <div className="divider"></div>
-                                    <div className="footer">
-                                        <div className="already">
-                                            <p>Already have an account? <Link className='link' to='/login'>Login</Link></p>
+                                    <form onSubmit={register}>
+                                        <div className="name">
+                                            <input className='nameTxt' type="text" placeholder='First Name' value={first} onChange={e => setFirst(e.target.value)} />
+                                            <input className='nameTxt' type="text" placeholder='Last Name' value={last} onChange={e => setLast(e.target.value)} />
                                         </div>
-                                        <div className="create">
-                                            {active ? <button onClick={register}>Create Account</button> : <button className='inactive' disabled>Create Account</button>}
+                                        <div className="address">
+                                            <input type="text" placeholder='Complete Adress' value={address} onChange={e => setAddress(e.target.value)} />
                                         </div>
-                                    </div>
+                                        <div className="contact">
+
+
+                                            <input className='email' type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                                            {(emailTaken) ? <p className='emailAlert'>Email Taken</p> : <p className='emailAlert' hidden>Email Taken</p>}
+
+                                            <input className='mobile' type="text" placeholder='Mobile Number' value={mobile} onChange={e => setMobile(e.target.value)} />
+                                        </div>
+                                        <div className="password">
+                                            <input className='nameTxt' type="password" placeholder='Password' value={pass1} onChange={e => setPass1(e.target.value)} />
+                                            <input className='nameTxt' type="password" placeholder='Confirm Password' value={pass2} onChange={e => setPass2(e.target.value)} />
+                                        </div>
+                                        <div className="divider"></div>
+                                        <div className="footer">
+                                            <div className="already">
+                                                <p>Already have an account? <Link className='link' to='/login'>Login</Link></p>
+                                            </div>
+                                            <div className="create">
+                                                {active ? <button onClick={register}>Create Account</button> : <button className='inactive' disabled>Create Account</button>}
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>}
