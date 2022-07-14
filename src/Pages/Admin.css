@@ -99,3 +99,25 @@
     justify-content: center;
     margin: 20px 0;
 }
+
+.admin .list {
+    padding: 0 20px;
+}
+
+@media only screen and (max-width:1600px) {
+    .admin .mdCon {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .admin .mdCon {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:850px) {
+    .admin .head {
+        flex-direction: column;
+    }
+}

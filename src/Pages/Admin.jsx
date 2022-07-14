@@ -74,11 +74,11 @@ export default function Admin() {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify({
-                    name: name,
+                    name: name.toUpperCase(),
                     description: description,
-                    category: category,
-                    kind: kind,
-                    brand: brand,
+                    category: category.toLowerCase(),
+                    kind: kind.toLowerCase(),
+                    brand: brand.toLowerCase(),
                     price: price,
                     image: image,
                     availableStock: stock
@@ -96,8 +96,8 @@ export default function Admin() {
 
     return (
         <div className="admin">
-            <div className="smCon">
-                <div className="row">
+            <div className="mdCon">
+                <div className="row head">
                     <div className="col2">
                         <div className="content">
                             <div className="title">

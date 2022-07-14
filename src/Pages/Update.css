@@ -7,14 +7,7 @@
     padding: 10px 15px;
 }
 
-.update img {
-    width: 70%;
-}
 
-.update .image {
-    display: flex;
-    justify-content: end;
-}
 
 
 .update .number {
@@ -73,4 +66,73 @@
 
 .update .top {
     margin: 5px 0;
+}
+
+@media only screen and (max-width:1460px) {
+    .update .smCon {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    .update .col2 {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .update .smCon {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:880px) {
+    .update .class {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+
+    }
+
+    .update .number {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+
+    }
+
+    .update .one {
+        margin-right: 0px;
+        width: 100%;
+
+    }
+
+    .update .two {
+        margin: 5px 0px;
+        width: 100%;
+    }
+
+    .update .left {
+        margin-right: 5px;
+        width: 100%;
+
+    }
+
+    .update .center {
+        margin: 5px 0px;
+        width: 100%;
+
+    }
+
+    .update .last {
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .update .row {
+        flex-direction: column;
+    }
+
 }
