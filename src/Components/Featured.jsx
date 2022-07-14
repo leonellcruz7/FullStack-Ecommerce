@@ -11,7 +11,7 @@ export default function Featured() {
     const animation = useAnimation()
 
     useEffect(() => {
-        console.log(inView)
+
     }, [inView])
 
 
@@ -27,10 +27,22 @@ export default function Featured() {
                     </div>
                     <div className="col2">
                         <div className="content">
-                            <motion.p ref={ref}>Great Deals only at Online Store</motion.p>
-                            <h1>Shop Fashion Online.</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore distinctio quos in rerum ducimus quis? Quidem commodi ad aspernatur rem qui voluptas facilis consequuntur perferendis excepturi, deserunt eveniet.</p>
-                            <button onClick={e => navigate('/products')}>Shop Now</button>
+                            <motion.p
+                                initial={{ x: 500, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2 }}>Great Deals only at Online Store</motion.p>
+                            <motion.h1
+                                initial={{ x: 500, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, delay: .2 }}>Shop Fashion Online.</motion.h1>
+                            <motion.p
+                                initial={{ x: 500, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, delay: .3 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore distinctio quos in rerum ducimus quis? Quidem commodi ad aspernatur rem qui voluptas facilis consequuntur perferendis excepturi, deserunt eveniet.</motion.p>
+                            <motion.button onClick={e => navigate('/products')}
+                                initial={{ x: 500, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, delay: .4 }}>Shop Now</motion.button>
                         </div>
                     </div>
                 </div>
