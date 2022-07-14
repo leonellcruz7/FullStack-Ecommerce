@@ -1,7 +1,11 @@
 
+import { motion, useAnimation } from 'framer-motion'
 import React, { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 import { useNavigate } from 'react-router-dom'
+
+
 
 
 import './Brands.css'
@@ -9,6 +13,18 @@ import './Brands.css'
 export default function Brands() {
     const navigate = useNavigate()
 
+    const { ref, inView } = useInView()
+
+    const animation = useAnimation()
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                y: 0,
+                opacity: 1
+            })
+        }
+    })
 
     function nike(e) {
 
@@ -41,7 +57,11 @@ export default function Brands() {
     return (
         <div className="brands">
             <div className="smCon">
-                <div className="row">
+                <motion.div className="row"
+                    ref={ref}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={animation}
+                    transition={{ type: 'spring', duration: 1 }}>
                     <div className="col5">
                         <div className="content">
 
@@ -68,7 +88,7 @@ export default function Brands() {
                             <img src={require('../img/paypal.png')} alt="" />
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div >
     )

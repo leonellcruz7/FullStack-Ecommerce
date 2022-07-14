@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import './Admin.css'
 import axios from 'axios'
+import { motion } from 'framer-motion'
+
 
 
 
@@ -87,9 +89,15 @@ export default function Admin() {
                     <div className="col2">
                         <div className="content">
                             <div className="title">
-                                <h2>Start selling in easy 3 steps</h2>
+                                <motion.h2
+                                    initial={{ x: -600, opacity: 0 }}
+                                    animate={{ x: 0, opacity: 1 }}
+                                    transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: 0 }}>Start selling in easy 3 steps</motion.h2>
                             </div>
-                            <div className="box">
+                            <motion.div className="box"
+                                initial={{ x: -600, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: 0.1 }}>
                                 <div className="number">
                                     <h2>1</h2>
                                 </div>
@@ -97,8 +105,11 @@ export default function Admin() {
                                     <h4>Register a Seller Account</h4>
                                     <p>Check seller account</p>
                                 </div>
-                            </div>
-                            <div className="box">
+                            </motion.div>
+                            <motion.div className="box"
+                                initial={{ x: -600, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: 0.2 }}>
                                 <div className="number">
                                     <h2>2</h2>
                                 </div>
@@ -106,8 +117,11 @@ export default function Admin() {
                                     <h4>Type details in the registration form</h4>
                                     <p>Enter Name, Email Address and Contact Number</p>
                                 </div>
-                            </div>
-                            <div className="box">
+                            </motion.div>
+                            <motion.div className="box"
+                                initial={{ x: -600, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: 0.3 }}>
                                 <div className="number">
                                     <h2>3</h2>
                                 </div>
@@ -115,13 +129,16 @@ export default function Admin() {
                                     <h4>Upload your product</h4>
                                     <p>Upload your product image and details.</p>
                                 </div>
-                            </div>
+                            </motion.div>
 
                         </div>
                     </div>
                     {(localStorage.getItem('isAdmin') === 'true') ?
                         <div className="col2">
-                            <div className="content">
+                            <motion.div className="content"
+                                initial={{ x: 600, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.5, bounce: .3, delay: 0.2 }}>
                                 <div className="card">
                                     <div className="title">
                                         <h2>Sell your product.</h2>
@@ -159,11 +176,14 @@ export default function Admin() {
 
 
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                         :
                         <div className="col2">
-                            <div className="content">
+                            <motion.div className="content"
+                                initial={{ x: 600, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.5, bounce: .3, delay: 0.2 }}>
                                 <div className="card">
                                     <div className="title">
                                         <h2 className='alert'>Log in as Seller</h2>
@@ -202,7 +222,7 @@ export default function Admin() {
 
 
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     }
 

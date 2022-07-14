@@ -30,19 +30,19 @@ export default function Featured() {
                             <motion.p
                                 initial={{ x: 500, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ type: 'spring', duration: 1.2 }}>Great Deals only at Online Store</motion.p>
+                                transition={{ type: 'spring', duration: .6 }}>Great Deals only at Online Store</motion.p>
                             <motion.h1
                                 initial={{ x: 500, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ type: 'spring', duration: 1.2, delay: .2 }}>Shop Fashion Online.</motion.h1>
+                                transition={{ type: 'spring', duration: .6, delay: .2 }}>Shop Fashion Online.</motion.h1>
                             <motion.p
                                 initial={{ x: 500, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ type: 'spring', duration: 1.2, delay: .3 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore distinctio quos in rerum ducimus quis? Quidem commodi ad aspernatur rem qui voluptas facilis consequuntur perferendis excepturi, deserunt eveniet.</motion.p>
+                                transition={{ type: 'spring', duration: .6, delay: .3 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum esse dolore distinctio quos in rerum ducimus quis? Quidem commodi ad aspernatur rem qui voluptas facilis consequuntur perferendis excepturi, deserunt eveniet.</motion.p>
                             <motion.button onClick={e => navigate('/products')}
                                 initial={{ x: 500, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
-                                transition={{ type: 'spring', duration: 1.2, delay: .4 }}>Shop Now</motion.button>
+                                transition={{ type: 'spring', duration: .6, delay: .4 }}>Shop Now</motion.button>
                         </div>
                     </div>
                 </div>
