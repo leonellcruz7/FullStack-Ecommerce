@@ -16,6 +16,26 @@ export default function Register() {
     const [pass2, setPass2] = useState('')
     const [active, setActive] = useState(true)
     const [admin, setAdmin] = useState(false)
+    const [emailTaken, setEmailTaken] = useState(false)
+
+    useEffect(() => {
+        fetch('https://ecommerce-leonell.herokuapp.com/users/getbyemail', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email
+            })
+        }).then(res => res.json()).then(data => {
+            if (data.length !== 0) {
+                setEmailTaken(true)
+            }
+            else {
+                setEmailTaken(false)
+            }
+        })
+    }, [email])
 
     function register(e) {
         e.preventDefault()
@@ -36,8 +56,14 @@ export default function Register() {
             })
         }).then(res => res.json()).then(data => {
             console.log(data)
-            alert('Registration Successful')
-            navigate('/login')
+            if (emailTaken) {
+                alert('Email is already taken')
+            }
+            else {
+                alert('Registration Successful')
+                navigate('/login')
+            }
+
         })
     }
 
@@ -82,7 +108,13 @@ export default function Register() {
                                         <input type="text" placeholder='Complete Adress' value={address} onChange={e => setAddress(e.target.value)} />
                                     </div>
                                     <div className="contact">
+
                                         <input className='email' type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                                        {(emailTaken) ? <p className='emailAlert'>Email Taken</p> : <p className='emailAlert' hidden>Email Taken</p>}
+
+
+
+
                                         <input className='mobile' type="text" placeholder='Mobile Number' value={mobile} onChange={e => setMobile(e.target.value)} />
                                     </div>
                                     <div className="password">
@@ -116,7 +148,16 @@ export default function Register() {
                                         <input type="text" placeholder='Complete Adress' value={address} onChange={e => setAddress(e.target.value)} />
                                     </div>
                                     <div className="contact">
+
+
                                         <input className='email' type="email" placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                                        {(emailTaken) ? <p className='emailAlert'>Email Taken</p> : <p className='emailAlert' hidden>Email Taken</p>}
+
+
+
+
+
+
                                         <input className='mobile' type="text" placeholder='Mobile Number' value={mobile} onChange={e => setMobile(e.target.value)} />
                                     </div>
                                     <div className="password">

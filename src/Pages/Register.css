@@ -1,12 +1,14 @@
 .register {
-    height: 100vh;
     background-color: rgb(188, 218, 228);
-    padding-top: 120px;
 }
 
 .register .row {
     justify-content: center;
     padding: 20px 0;
+}
+
+.register .mdCon {
+    padding: 130px 0;
 }
 
 .register .seller {
@@ -95,6 +97,13 @@
 
 .register .divider {
     width: 90%;
+}
+
+.register .emailAlert {
+    position: absolute;
+    font-size: 12px;
+    transform: translateY(-35%);
+    color: brown;
 }
 
 @media only screen and (max-width:1320px) {

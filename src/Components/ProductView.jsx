@@ -25,7 +25,7 @@ export default function ProductView() {
     }
 
     useEffect(() => {
-        if (amount == 0 || product.availableStock < amount || localStorage.getItem('token') == null) {
+        if (amount == 0 || product.availableStock < amount || localStorage.getItem('token') == null || localStorage.getItem('isAdmin') == 'true') {
             setActive(false)
         }
         else {
@@ -93,6 +93,7 @@ export default function ProductView() {
                                 <button onClick={inc}><FontAwesomeIcon icon="fa-solid fa-plus" /></button>
                             </div>
                             {active ? <button className='buyBtn' onClick={buy}>Add to Cart</button> : <button className='buyBtn inactive' onClick={buy} disabled>Add to Cart</button>}
+                            {(localStorage.getItem('isAdmin') == 'true') ? <h4 className='alert'>Please login to a customer account</h4> : <h4 hidden>Login first</h4>}
                             {(localStorage.getItem('token') == null) ? <h4 className='alert'>Please login first</h4> : <h4 hidden>Login first</h4>}
 
                         </div>

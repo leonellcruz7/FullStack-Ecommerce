@@ -69,7 +69,13 @@ export default function NavBar() {
                         {isOnline ?
                             <Fragment>
                                 <li><Link className='link' to='/logout' onClick={e => setToggle(false)}>logout</Link></li>
-                                <li><Link className='link' to='/cart' onClick={e => setToggle(false)}>cart</Link></li>
+
+                                {(localStorage.getItem('isAdmin') == 'true') ?
+                                    <li><Link className='link' to='/dashboard' onClick={e => setToggle(false)}>myShop</Link></li>
+                                    :
+                                    <li><Link className='link' to='/cart' onClick={e => setToggle(false)}>cart</Link></li>
+                                }
+
                             </Fragment>
                             :
                             <Fragment>
@@ -96,7 +102,13 @@ export default function NavBar() {
                             <Fragment>
                                 <div className='cart'>
                                     <button className='regBtn' onClick={e => navigate('/logout')}>Logout</button>
-                                    <Link to='/cart'><FontAwesomeIcon className='fontIcons' icon="fa-solid fa-cart-shopping" /></Link>
+                                    {(localStorage.getItem('isAdmin') == 'true') ?
+                                        <Link to='/dashboard'> <FontAwesomeIcon className='fontIcons' icon="fa-solid fa-shop" /></Link>
+                                        :
+                                        <Link to='/cart'><FontAwesomeIcon className='fontIcons' icon="fa-solid fa-cart-shopping" /></Link>
+                                    }
+
+
                                 </div>
                             </Fragment>
                             :

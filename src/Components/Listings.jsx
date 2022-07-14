@@ -48,7 +48,7 @@ export default function Listings({ listProp }) {
         })
     }
     return (
-        <div className="col4 listings">
+        <div className="col5 listings">
             <div className="content">
                 <div className="image">
                     <img src={listProp.image} alt="" />

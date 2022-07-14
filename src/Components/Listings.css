@@ -1,93 +1,19 @@
-.listings {
-    padding: 0 20px;
+.listings .content {
+    padding: 20px;
 }
 
-.listings .content {
-    display: flex;
-    margin: 20px 0;
-    padding: 0 5px;
-
+.listings button {
+    padding: 10px;
+    margin-right: 5px;
 }
 
 .listings .detail {
-    margin: 0 10px;
     display: flex;
     flex-direction: column;
-    max-width: 150px;
     justify-content: space-between;
-
-}
-
-
-.listings .listBtn {
-    padding: 5px;
-    margin: 5px 0;
-    max-width: 200px;
-}
-
-.listings .btn {
-    display: flex;
-    flex-direction: column;
-
+    min-height: 150px;
 }
 
 .listings .remove {
     background-color: brown;
-
-}
-
-.listings .image {
-    max-width: 200px;
-    min-width: 200px;
-    display: flex;
-    align-items: center;
-}
-
-.listings img {
-    max-width: 200px;
-    min-width: 200px;
-    margin: 10px 0;
-}
-
-@media only screen and (max-width:1880px) {
-    .listings {
-        flex-basis: 33%;
-    }
-}
-
-@media only screen and (max-width:1280px) {
-    .listings {
-        flex-basis: 50%;
-    }
-}
-
-@media only screen and (max-width:820px) {
-    .listings {
-        flex-basis: 90%;
-    }
-
-    .listings .image {
-        max-width: 300px;
-
-        display: flex;
-        align-items: center;
-    }
-
-    .listings img {
-        max-width: 300px;
-
-    }
-
-    .listings .content {
-        padding: 0;
-
-    }
-}
-
-@media only screen and (max-width:550px) {
-    .listings .content {
-        flex-direction: column;
-    }
-
-
 }
