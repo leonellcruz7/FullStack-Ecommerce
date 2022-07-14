@@ -22,7 +22,7 @@ export default function Featured() {
                 <div className="row">
                     <div className="col2">
                         <div className="content">
-                            <img src={require(`../img/feature.png`)} alt="" />
+                            <img src={require(`../img/feature.png`)} />
                         </div>
                     </div>
                     <div className="col2">

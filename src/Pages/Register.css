@@ -51,6 +51,7 @@
 
 .register .sellertitle {
     background-color: rgb(43, 114, 70);
+    overflow: hidden;
 }
 
 .register .name,

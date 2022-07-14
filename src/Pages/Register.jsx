@@ -2,6 +2,8 @@ import React, { Fragment, useEffect, useState } from 'react'
 import './Register.css'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { motion } from 'framer-motion'
+
 
 export default function Register() {
 
@@ -78,7 +80,10 @@ export default function Register() {
 
     return (
         <div className="register">
-            <div className="mdCon">
+            <motion.div className="mdCon"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ type: 'spring', duration: 1, bounce: .3 }}>
                 <div className="row seller">
                     <div className="col3">
                         {admin ?
@@ -174,7 +179,7 @@ export default function Register() {
                         </div>}
 
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

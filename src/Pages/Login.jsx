@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useContext } from 'react'
 import UserContext from '../Components/UserContext'
+import { motion } from 'framer-motion'
+
 
 export default function Login() {
 
@@ -81,11 +83,20 @@ export default function Login() {
                 <div className="row">
                     <div className="col2 slogan">
                         <div className="content slog">
-                            <h1><span className='shoptxt'> Shop</span> at the comfort <br /> of your <span className='hometxt'>Home</span> </h1>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi dignissimos sapiente nemo quaerat </p>
+                            <motion.h1
+                                initial={{ x: -500, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: 0 }}><span className='shoptxt'> Shop</span> at the comfort <br /> of your <span className='hometxt'>Home</span> </motion.h1>
+                            <motion.p
+                                initial={{ x: -500, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: .1 }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi dignissimos sapiente nemo quaerat </motion.p>
                         </div>
                     </div>
-                    <div className="col2 loginform">
+                    <motion.div className="col2 loginform"
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ type: 'spring', duration: 1.2, bounce: .3, delay: .1 }}>
                         <form className="content" onSubmit={login}>
                             <div className="title"><h2>Login     <FontAwesomeIcon className='idIcon' icon="fa-solid fa-id-card" /></h2></div>
                             <div className="card">
@@ -106,7 +117,7 @@ export default function Login() {
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>
