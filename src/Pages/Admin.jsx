@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Admin.css'
 import axios from 'axios'
 
-import Listings from '../Components/Listings'
 
 
 export default function Admin() {
