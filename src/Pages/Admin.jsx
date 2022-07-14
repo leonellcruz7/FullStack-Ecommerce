@@ -129,33 +129,34 @@ export default function Admin() {
                                         <div className="divider"></div>
                                     </div>
 
+                                    <form onSubmit={submit}>
+                                        <input type="text" placeholder='Name' onChange={e => setName(e.target.value)} />
+                                        <input type="text" placeholder='Description' onChange={e => setDescription(e.target.value)} />
 
-                                    <input type="text" placeholder='Name' onChange={e => setName(e.target.value)} />
-                                    <input type="text" placeholder='Description' onChange={e => setDescription(e.target.value)} />
 
+                                        <div className="types">
+                                            <input className='left' type="text" placeholder='Brand' onChange={e => setBrand(e.target.value)} />
+                                            <input className='right' type="dropdown" placeholder='Kind' onChange={e => setKind(e.target.value)} />
 
-                                    <div className="types">
-                                        <input className='left' type="text" placeholder='Brand' onChange={e => setBrand(e.target.value)} />
-                                        <input className='right' type="dropdown" placeholder='Kind' onChange={e => setKind(e.target.value)} />
+                                        </div>
+                                        <div className="category">
+                                            <input className='left' type="text" placeholder='Category' onChange={e => setCategory(e.target.value)} />
+                                            <input className='right' type="number" placeholder='Quantity' onChange={e => setStock(e.target.value)} />
+                                        </div>
+                                        <div className="price">
+                                            <input className='left' type="number" placeholder='Price' onChange={e => setPrice(e.target.value)} />
+                                            <input className='right' type="file" onChange={e => setImageFile(e.target.files[0])} />
+                                        </div>
+                                        <div className="upload">
 
-                                    </div>
-                                    <div className="category">
-                                        <input className='left' type="text" placeholder='Category' onChange={e => setCategory(e.target.value)} />
-                                        <input className='right' type="number" placeholder='Quantity' onChange={e => setStock(e.target.value)} />
-                                    </div>
-                                    <div className="price">
-                                        <input className='left' type="number" placeholder='Price' onChange={e => setPrice(e.target.value)} />
-                                        <input className='right' type="file" onChange={e => setImageFile(e.target.files[0])} />
-                                    </div>
-                                    <div className="upload">
+                                            {active ?
+                                                <button onClick={submit}>Upload Product</button>
+                                                :
+                                                <button className='inactive' onClick={submit} disabled>Upload Product</button>
+                                            }
 
-                                        {active ?
-                                            <button onClick={submit}>Upload Product</button>
-                                            :
-                                            <button className='inactive' onClick={submit} disabled>Upload Product</button>
-                                        }
-
-                                    </div>
+                                        </div>
+                                    </form>
 
 
                                 </div>
@@ -170,34 +171,35 @@ export default function Admin() {
                                         <div className="divider"></div>
                                     </div>
 
-
-                                    <input type="text" placeholder='Name' onChange={e => setName(e.target.value)} disabled />
-                                    <input type="text" placeholder='Description' onChange={e => setDescription(e.target.value)} disabled />
-
-
-                                    <div className="types">
-                                        <input className='left' type="text" placeholder='Brand' onChange={e => setBrand(e.target.value)} disabled />
-                                        <input className='right' type="dropdown" placeholder='Kind' onChange={e => setKind(e.target.value)} disabled />
-
-                                    </div>
-                                    <div className="category">
-                                        <input className='left' type="text" placeholder='Category' onChange={e => setCategory(e.target.value)} disabled />
-                                        <input className='right' type="number" placeholder='Quantity' onChange={e => setStock(e.target.value)} disabled />
-                                    </div>
-                                    <div className="price">
-                                        <input className='left' type="number" placeholder='Price' onChange={e => setPrice(e.target.value)} disabled />
-                                        <input className='right' type="file" onChange={e => setImageFile(e.target.files[0])} disabled />
-                                    </div>
-                                    <div className="upload">
-
-                                        {(localStorage.getItem('isAdmin') === 'true') ?
-                                            <button onClick={submit}>Upload Product</button>
-                                            :
-                                            <button className='inactive' onClick={submit} disabled>Upload Product</button>
-                                        }
+                                    <form>
+                                        <input type="text" placeholder='Name' onChange={e => setName(e.target.value)} disabled />
+                                        <input type="text" placeholder='Description' onChange={e => setDescription(e.target.value)} disabled />
 
 
-                                    </div>
+                                        <div className="types">
+                                            <input className='left' type="text" placeholder='Brand' onChange={e => setBrand(e.target.value)} disabled />
+                                            <input className='right' type="dropdown" placeholder='Kind' onChange={e => setKind(e.target.value)} disabled />
+
+                                        </div>
+                                        <div className="category">
+                                            <input className='left' type="text" placeholder='Category' onChange={e => setCategory(e.target.value)} disabled />
+                                            <input className='right' type="number" placeholder='Quantity' onChange={e => setStock(e.target.value)} disabled />
+                                        </div>
+                                        <div className="price">
+                                            <input className='left' type="number" placeholder='Price' onChange={e => setPrice(e.target.value)} disabled />
+                                            <input className='right' type="file" onChange={e => setImageFile(e.target.files[0])} disabled />
+                                        </div>
+                                        <div className="upload">
+
+                                            {(localStorage.getItem('isAdmin') === 'true') ?
+                                                <button onClick={submit}>Upload Product</button>
+                                                :
+                                                <button className='inactive' onClick={submit} disabled>Upload Product</button>
+                                            }
+
+
+                                        </div>
+                                    </form>
 
 
                                 </div>
