@@ -11,14 +11,15 @@
     padding: 130px 0;
 }
 
-.register .seller {
-    transform: translateY(40px);
+.register .choose {
+    transform: translateY(10px);
+    position: absolute;
     cursor: pointer;
     transition: .1s ease;
 
 }
 
-.register .seller:hover {
+.register .choose:hover {
     font-size: 17px;
 
 
